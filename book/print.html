@@ -205,6 +205,9 @@ Code blocks may contain several different icons for interacting with them:</p>
 </span>println!("Hello, World!");
 <span class="boring">}</span></code></pre></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-0-introduction"><a class="header" href="#chapter-0-introduction">Chapter 0: Introduction</a></h1>
+<blockquote>
+<p>last updated: 2025-03-25</p>
+</blockquote>
 <p>Helloooo! 0/<br />
 This is meant to be a quick read about the general concepts in programming especially for beginner concepts to programming, however, some advanced concepts may be added later on.</p>
 <h2 id="tutorials-exist-everywhere-why-even-make-this"><a class="header" href="#tutorials-exist-everywhere-why-even-make-this">Tutorials exist everywhere, why even make this?</a></h2>
@@ -221,6 +224,24 @@ This is meant to be a quick read about the general concepts in programming espec
 <li>a way to map a blueprint of a set of values into a larger place in memory</li>
 </ol>
 <p>I'll explain those in detail later but generally that's what most programming languages should support, maybe a select few ones might not support number 6.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1-io"><a class="header" href="#chapter-1-io">Chapter 1: IO</a></h1>
+<blockquote>
+<p>last updated: 2025-03-25</p>
+</blockquote>
+<p>There's no program that doesn't take in input and give output, some common forms are:</p>
+<ul>
+<li>to and from a console window (a traditionally black and white window that can only display text)</li>
+<li>to and from a file</li>
+<li>to and from another program</li>
+<li>to and from a Graphical User Interface (GUI), which is the most common form of Input and output (IO) as of today.</li>
+</ul>
+<p>This book will mostly use console output for any sort of output as it's the easiest and quickest to do, however we'll go through the console output, file output, and GUI output in this Chapter.</p>
+<h2 id="output-to-a-console-window"><a class="header" href="#output-to-a-console-window">Output to a console window</a></h2>
+<p>this arguably the easiest way to check if a piece of code is getting reached, it shows output to a window called a <em>terminal emulator</em>, mostly called cmd in windows, and it usually looks like this:<br />
+<img src="./images/output_terminal.png" alt="image of console output" /><br />
+the above picture was the output of the following piece of code</p>
+<pre><code class="language-lua">print("hello world")
+</code></pre>
 
                     </main>
 
@@ -239,22 +260,6 @@ This is meant to be a quick read about the general concepts in programming espec
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

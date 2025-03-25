@@ -5,7 +5,7 @@
 ---
 # Beginner
 ---
-- [Chapter 1: IO]()
+- [Chapter 1: IO](./chapter_1.md)
 - [Chapter 2: Variables]()
 - [Chapter 3: Conditionals]()
 - [Chapter 4: Loops]()
