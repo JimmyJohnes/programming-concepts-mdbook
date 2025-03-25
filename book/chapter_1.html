@@ -164,12 +164,26 @@
 <li>to and from a Graphical User Interface (GUI), which is the most common form of Input and output (IO) as of today.</li>
 </ul>
 <p>This book will mostly use console output for any sort of output as it's the easiest and quickest to do, however we'll go through the console output, file output, and GUI output in this Chapter.</p>
+<hr />
+<h1 id="console"><a class="header" href="#console">CONSOLE</a></h1>
+<hr />
 <h2 id="output-to-a-console-window"><a class="header" href="#output-to-a-console-window">Output to a console window</a></h2>
 <p>this arguably the easiest way to check if a piece of code is getting reached, it shows output to a window called a <em>terminal emulator</em>, mostly called cmd in windows, and it usually looks like this:<br />
 <img src="./images/output_terminal.png" alt="image of console output" /><br />
 the above picture was the output of the following piece of code</p>
 <pre><code class="language-lua">print("hello world")
 </code></pre>
+<p>you might also find them called standard output and input</p>
+<h2 id="input-to-a-console-window"><a class="header" href="#input-to-a-console-window">Input to a console window</a></h2>
+<p>Easiest way to get input for a program, input is usually done with a keyboard in an input field and is almost always in text<br />
+<img src="./images/input_terminal_before.png" alt="image of console input before entering" /><br />
+notice how it's different from output where it ended the program right away? It's waiting asking for input<br />
+<img src="./images/input_terminal_after.png" alt="image of console input after entering" /><br />
+the above picture was the output of the following piece of code</p>
+<pre><code class="language-lua">print("what is your name?")
+io.read()
+</code></pre>
+<p>you might also find them called standard output and input</p>
 
                     </main>
 
