@@ -220,7 +220,7 @@ This is meant to be a quick read about the general concepts in programming espec
 <li>a way to group code into small repeatable chunks</li>
 <li>a way to map a blueprint of a set of values into a larger place in memory</li>
 </ol>
-<p>I'll explain those in detail later but generally that's what most programming languages should support, maybe a select few ones might not support number 6</p>
+<p>I'll explain those in detail later but generally that's what most programming languages should support, maybe a select few ones might not support number 6.</p>
 
                     </main>
 
@@ -239,6 +239,22 @@ This is meant to be a quick read about the general concepts in programming espec
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

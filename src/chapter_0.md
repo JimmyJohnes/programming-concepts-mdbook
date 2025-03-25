@@ -16,4 +16,4 @@ every programming language out there has the following features:
 5. a way to group code into small repeatable chunks
 6. a way to map a blueprint of a set of values into a larger place in memory 
 
-I'll explain those in detail later but generally that's what most programming languages should support, maybe a select few ones might not support number 6
+I'll explain those in detail later but generally that's what most programming languages should support, maybe a select few ones might not support number 6.
