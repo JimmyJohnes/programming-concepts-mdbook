@@ -1,6 +1,6 @@
 # Summary
 
-- [How to Read this Book](./reading_the_book.md)
+[How to Read this Book](./reading_the_book.md)
 - [Chapter 0: Introduction](./chapter_0.md)
 ---
 # Beginner
