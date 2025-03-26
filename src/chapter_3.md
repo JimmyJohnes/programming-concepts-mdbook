@@ -15,7 +15,44 @@ In lua it looks like this:
     -- do something
     end
 ```
-most programming languages have types of if statements too 
+and you replace "condition" with what's called `operands` similar to in how we have in maths  
+- `=` for equals
+- `>` more than
+- `<` less than
+- `>=` more than or equals
+- `<=` less than or equals
+- we also have `%` for remainder, called modulo or modulus
+we have here these `operands` that evaluate to either true or false, they are:
+- `==` for equals
+- `>` for more than
+- `<` for less than
+- `>=` for more than or equals
+- `<=` for less than or equals
+most programming languages have types of if statements too  
 
 ### Normal if statements
+they're similar to the examples above, so let's implement the example we first mentioned, first I want you to think of the steps to implement this yourself generally not in code and then we'll figure out how to implement it.  
+<details>
+  <summary>Answer</summary>
+  first you would want to get the user's name through some form of input, wouldn't you?  
+  But how would the user know that we require their name if we don't output something telling them what we want?
+  Now that we established that we need to show them some prompt and take their input, we use what learned before to write it like this  
 
+  ```lua
+    print("what is your name? please write it in all lowercase")
+    io.read()
+  ```
+  but now we also need to remember the user input don't we? Because we want to check if their name is "mark"  
+  ``` lua
+  print("what is your name? please write it in all lowercase")
+  local user_name = io.read()
+  ```
+  now we get to the point where we check if it's mark, we use the example in we used before to write it 
+  ```lua
+  print("what is your name? please write it in all lowercase")
+  local user_name = io.read()
+  if user_name == "mark" then
+    print("Oh hi, mark!")
+    end
+  ```
+</details>

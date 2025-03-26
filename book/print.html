@@ -344,8 +344,44 @@ In lua it looks like this:</p>
     -- do something
     end
 </code></pre>
-<p>most programming languages have types of if statements too</p>
+<p>and you replace "condition" with what's called <code>operands</code> similar to in how we have in maths</p>
+<ul>
+<li><code>=</code> for equals</li>
+<li><code>&gt;</code> more than</li>
+<li><code>&lt;</code> less than</li>
+<li><code>&gt;=</code> more than or equals</li>
+<li><code>&lt;=</code> less than or equals</li>
+<li>we also have <code>%</code> for remainder, called modulo or modulus
+we have here these <code>operands</code> that evaluate to either true or false, they are:</li>
+<li><code>==</code> for equals</li>
+<li><code>&gt;</code> for more than</li>
+<li><code>&lt;</code> for less than</li>
+<li><code>&gt;=</code> for more than or equals</li>
+<li><code>&lt;=</code> for less than or equals
+most programming languages have types of if statements too</li>
+</ul>
 <h3 id="normal-if-statements"><a class="header" href="#normal-if-statements">Normal if statements</a></h3>
+<p>they're similar to the examples above, so let's implement the example we first mentioned, first I want you to think of the steps to implement this yourself generally not in code and then we'll figure out how to implement it.</p>
+<details>
+  <summary>Answer</summary>
+  first you would want to get the user's name through some form of input, wouldn't you?  
+  But how would the user know that we require their name if we don't output something telling them what we want?
+  Now that we established that we need to show them some prompt and take their input, we use what learned before to write it like this  
+<pre><code class="language-lua">  print("what is your name? please write it in all lowercase")
+  io.read()
+</code></pre>
+<p>but now we also need to remember the user input don't we? Because we want to check if their name is "mark"</p>
+<pre><code class="language-lua">print("what is your name? please write it in all lowercase")
+local user_name = io.read()
+</code></pre>
+<p>now we get to the point where we check if it's mark, we use the example in we used before to write it</p>
+<pre><code class="language-lua">print("what is your name? please write it in all lowercase")
+local user_name = io.read()
+if user_name == "mark" then
+  print("Oh hi, mark!")
+  end
+</code></pre>
+</details>
 
                     </main>
 
