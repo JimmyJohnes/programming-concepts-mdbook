@@ -29,3 +29,32 @@ Some languages might not offer strings as a datatype, and some might not use a k
 
 ### using a variable
 how do you call for someone you know that's standing far from you? You use their name! That's exactly how you use a variable too :D  
+so say we've shown the user a prompt asking for their name as follows
+```lua
+print("what is your name? ")
+local name = io.read()
+```
+this told the computer "I want you to show the user the sentence 'what is your name?' and then save whatever the user inputs into a place in the memory called name"
+now that gives us a way to use it by calling the "name" like this
+```lua
+print("Hello, ", name)
+```
+that tells the computer "show the user the sentence 'Hello, ' followed by whatever value is inside the place named 'name'" which should give us an output like this  
+![using a variable](./images/input_with_variable.png)  
+also, using variable names anywhere in your code with replace them with their value while your code is running allowing you to use variables in many other ways other than just outputting them!  
+For example:  
+- arithmetic
+  ```lua
+    local a = 2
+    local b = 3
+    local c = a + b 
+    print(c) -- 5
+  ```
+- string manipulation
+  ```lua
+  local a = "Hi "
+  local b = "There!"
+  local c = a .. b 
+  print(c) --Hi There!
+  ```
+you might have realised I use -- sometimes which isn't something I've explained yet, those are called comments, your computer will ignore them while trying to execute your code, they're meant for you or other people who read the code later on.

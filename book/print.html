@@ -291,7 +291,36 @@ Generally, there's a handful of data types in every programming language called 
 </ol>
 <p>Some languages might not offer strings as a datatype, and some might not use a keyword like <code>local</code> to declare a variable, you just write the name and it'll figure it out, so check how to declare them for each language you might use.</p>
 <h3 id="using-a-variable"><a class="header" href="#using-a-variable">using a variable</a></h3>
-<p>how do you call for someone you know that's standing far from you? You use their name! That's exactly how you use a variable too :D</p>
+<p>how do you call for someone you know that's standing far from you? You use their name! That's exactly how you use a variable too :D<br />
+so say we've shown the user a prompt asking for their name as follows</p>
+<pre><code class="language-lua">print("what is your name? ")
+local name = io.read()
+</code></pre>
+<p>this told the computer "I want you to show the user the sentence 'what is your name?' and then save whatever the user inputs into a place in the memory called name"
+now that gives us a way to use it by calling the "name" like this</p>
+<pre><code class="language-lua">print("Hello, ", name)
+</code></pre>
+<p>that tells the computer "show the user the sentence 'Hello, ' followed by whatever value is inside the place named 'name'" which should give us an output like this<br />
+<img src="./images/input_with_variable.png" alt="using a variable" /><br />
+also, using variable names anywhere in your code with replace them with their value while your code is running allowing you to use variables in many other ways other than just outputting them!<br />
+For example:</p>
+<ul>
+<li>arithmetic
+<pre><code class="language-lua">  local a = 2
+  local b = 3
+  local c = a + b 
+  print(c) -- 5
+</code></pre>
+</li>
+<li>string manipulation
+<pre><code class="language-lua">local a = "Hi "
+local b = "There!"
+local c = a .. b 
+print(c) --Hi There!
+</code></pre>
+</li>
+</ul>
+<p>you might have realised I use -- sometimes which isn't something I've explained yet, those are called comments, your computer will ignore them while trying to execute your code, they're meant for you or other people who read the code later on.</p>
 
                     </main>
 
