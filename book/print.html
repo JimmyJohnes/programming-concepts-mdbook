@@ -291,6 +291,7 @@ Generally, there's a handful of data types in every programming language called 
 </ol>
 <p>Some languages might not offer strings as a datatype, and some might not use a keyword like <code>local</code> to declare a variable, you just write the name and it'll figure it out, so check how to declare them for each language you might use.</p>
 <h3 id="using-a-variable"><a class="header" href="#using-a-variable">using a variable</a></h3>
+<p>how do you call for someone you know that's standing far from you? You use their name! That's exactly how you use a variable too :D</p>
 
                     </main>
 
@@ -309,6 +310,22 @@ Generally, there's a handful of data types in every programming language called 
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
