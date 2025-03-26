@@ -268,8 +268,29 @@ io.read() --reads console window input
 Input or output can be a file, gui, another program, or a standard IO (console window)
 all languages have at least one command to facilitate input gathering and output display</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-2-variables"><a class="header" href="#chapter-2-variables">Chapter 2: Variables</a></h1>
-<p>as you've seen in <a href="./chapter_1.html">Chapter 1</a> how we can get input from different sources for our program, but how do we actually use them though? Using something like <code>io.read()</code> only gives the computer the instruction to <em>take in</em> input, but not to remember it.</p>
+<p>as you've seen in <a href="./chapter_1.html">Chapter 1</a> how we can get input from different sources for our program, but how do we actually use them though? Using something like <code>io.read()</code> only gives the computer the instruction to <em>take in</em> input, but not to remember it, that's where variables come in.</p>
+<p>Let's be clear on one thing, no program runs on the hard disk drive (HDD) or solid state drive (SSD) directly, any and all programs are first moved onto the RAM in order to work properly, no matter how fast your SSD is, it's not faster than your RAM, the RAM is also closer to the CPU which makes it faster, but in turn this will always mean whatever data you store will be deleted after you close your program unless you save it to a place in your SSD.<br />
+So when I say "store" from now on I will my referring to you RAM and not in a physical file somewhere on your computer.</p>
 <h2 id="what-are-variables"><a class="header" href="#what-are-variables">What are variables</a></h2>
+<p>Variables are like a box which you can put one thing in, they're a place in memory only big enough for One value, they're also a way to remember these values later on the program because you  give them a name.</p>
+<h2 id="how-to-use-variables"><a class="header" href="#how-to-use-variables">How to use variables</a></h2>
+<h3 id="declaration"><a class="header" href="#declaration">Declaration</a></h3>
+<p>Say you see something like this in your code</p>
+<pre><code class="language-lua">local name = io.read()
+</code></pre>
+<p>we already know that <code>io.read()</code> takes in input, but what's that to it's left? The keyword <code>local</code> tells the program "I want to assign whatever input comes in to a place in memory" and the part before the equal sign is a name, so now you're telling the computer "I want to assign whatever input comes in to a place in memory, and name 'name' for whenever I need it again", the equal sign just say that it'll be assigned whatever value is on the right.</p>
+<h3 id="types-of-variables"><a class="header" href="#types-of-variables">Types of variables</a></h3>
+<p>As we established that variables are a space in memory for one thing, it's important to know how does it know how much of a space to assign? The answer is data types.<br />
+Generally, there's a handful of data types in every programming language called <em>primitive data types</em> and those are</p>
+<ol>
+<li>integer (also called int for short): these are numbers that aren't decimals and can't have a decimal point <code>eg: -1,0,1,2,3,4,...</code></li>
+<li>float (short for floating point numbers): these are <em>decimal</em> numbers with a decimal point <code>eg 1.0, 0.5, -1.2,...</code></li>
+<li>double: floats have a limit to how big they can get, so if they're not enough for you, you can use doubles</li>
+<li>char (short for characters): they are one character <code>eg: a,b,أ, ö</code></li>
+<li>strings: these are multiple characters, can be a word, a sentence, a paragraph, or the declaration of independence.</li>
+</ol>
+<p>Some languages might not offer strings as a datatype, and some might not use a keyword like <code>local</code> to declare a variable, you just write the name and it'll figure it out, so check how to declare them for each language you might use.</p>
+<h3 id="using-a-variable"><a class="header" href="#using-a-variable">using a variable</a></h3>
 
                     </main>
 
