@@ -1,4 +1,6 @@
 # Chapter 2: Variables  
+> last updated: 2025-03-26
+
 as you've seen in [Chapter 1](./chapter_1.md) how we can get input from different sources for our program, but how do we actually use them though? Using something like `io.read()` only gives the computer the instruction to *take in* input, but not to remember it, that's where variables come in.  
 
 Let's be clear on one thing, no program runs on the hard disk drive (HDD) or solid state drive (SSD) directly, any and all programs are first moved onto the RAM in order to work properly, no matter how fast your SSD is, it's not faster than your RAM, the RAM is also closer to the CPU which makes it faster, but in turn this will always mean whatever data you store will be deleted after you close your program unless you save it to a place in your SSD.  
