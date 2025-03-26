@@ -83,3 +83,5 @@ so the Answer to it would be like this
   ```
 </details>
 
+### switch case
+this is similar to an if statement, it's mostly used because writing multiple if statements after each other is harder to read and is slower in performance, but otherwise you're free to use whichever, lua doesn't seem to have an implementation for it so I'll refrain from writing an example, you can look it up yourself.
