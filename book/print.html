@@ -354,6 +354,7 @@ In lua it looks like this:</p>
 <li>we also have <code>%</code> for remainder, called modulo or modulus
 we have here these <code>operands</code> that evaluate to either true or false, they are:</li>
 <li><code>==</code> for equals</li>
+<li><code>!=</code> for not equals</li>
 <li><code>&gt;</code> for more than</li>
 <li><code>&lt;</code> for less than</li>
 <li><code>&gt;=</code> for more than or equals</li>
@@ -379,6 +380,27 @@ local user_name = io.read()
 local user_name = io.read()
 if user_name == "mark" then
   print("Oh hi, mark!")
+  end
+</code></pre>
+</details>
+<h3 id="if-else-statements"><a class="header" href="#if-else-statements">If else statements</a></h3>
+<p>similar to if statements, you can add an else block for whenever the condition evaluates to false, so if <code>name == mark </code> for example we want to show "Oh hi, mark", otherwise it'll show "Go away"
+in lua you'd have an else statement like this</p>
+<pre><code class="language-lua">if condition then
+  --do something
+else
+  --do something else
+ end
+</code></pre>
+<p>so the Answer to it would be like this</p>
+<details>
+  <summary>Answer</summary>
+<pre><code class="language-lua">print("what is your name? please write it in all lowercase")
+local user_name = io.read()
+if user_name == "mark" then
+  print("Oh hi, mark!")
+else
+  print("Go away!")
   end
 </code></pre>
 </details>

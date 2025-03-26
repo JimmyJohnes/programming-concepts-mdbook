@@ -24,6 +24,7 @@ and you replace "condition" with what's called `operands` similar to in how we h
 - we also have `%` for remainder, called modulo or modulus
 we have here these `operands` that evaluate to either true or false, they are:
 - `==` for equals
+- `!=` for not equals
 - `>` for more than
 - `<` for less than
 - `>=` for more than or equals
@@ -56,3 +57,29 @@ they're similar to the examples above, so let's implement the example we first m
     end
   ```
 </details>
+
+### If else statements
+  similar to if statements, you can add an else block for whenever the condition evaluates to false, so if `name == mark ` for example we want to show "Oh hi, mark", otherwise it'll show "Go away"
+in lua you'd have an else statement like this
+```lua
+if condition then
+  --do something
+else
+  --do something else
+ end
+```
+so the Answer to it would be like this
+<details>
+  <summary>Answer</summary>
+
+  ```lua
+  print("what is your name? please write it in all lowercase")
+  local user_name = io.read()
+  if user_name == "mark" then
+    print("Oh hi, mark!")
+  else
+    print("Go away!")
+    end
+  ```
+</details>
+
