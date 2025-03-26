@@ -27,6 +27,7 @@ Generally, there's a handful of data types in every programming language called 
 4. char (short for characters): they are one character `eg: a,b,أ, ö`
 5. strings: these are multiple characters, can be a word, a sentence, a paragraph, or the declaration of independence.
 
+Some languages might require explicit declaration of the variable type, those are called *Strongly typed languages*, while those that don't are called *Weakly typed languages*
 Some languages might not offer strings as a datatype, and some might not use a keyword like `local` to declare a variable, you just write the name and it'll figure it out, so check how to declare them for each language you might use.
 
 ### using a variable
@@ -60,3 +61,9 @@ For example:
   print(c) --Hi There!
   ```
 you might have realised I use -- sometimes which isn't something I've explained yet, those are called comments, your computer will ignore them while trying to execute your code, they're meant for you or other people who read the code later on.
+
+## Summary
+Variables are named place in memory to save input given to the program.  
+Most language use a keyword for declaring a variable so check it for each language.  
+Variable names are replaced with their values during code execution.  
+Some languages require explicit expression of the variable types.  
