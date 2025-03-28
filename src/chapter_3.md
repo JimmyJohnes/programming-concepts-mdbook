@@ -1,4 +1,6 @@
 # Chapter 3: Conditionals  
+> last updated: 2025-03-26  
+
 Sometimes you only want to activate some part of the code only if some condition applies, Say you're creating a login page that only admits one person named "mark" with all lowercase characters.   
 
 ## IF statements  

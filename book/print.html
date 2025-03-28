@@ -331,6 +331,9 @@ Most language use a keyword for declaring a variable so check it for each langua
 Variable names are replaced with their values during code execution.<br />
 Some languages require explicit expression of the variable types.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-3-conditionals"><a class="header" href="#chapter-3-conditionals">Chapter 3: Conditionals</a></h1>
+<blockquote>
+<p>last updated: 2025-03-26</p>
+</blockquote>
 <p>Sometimes you only want to activate some part of the code only if some condition applies, Say you're creating a login page that only admits one person named "mark" with all lowercase characters.</p>
 <h2 id="if-statements"><a class="header" href="#if-statements">IF statements</a></h2>
 <p>if statements allow us to execute a piece of code <em>if</em> a condition applies, otherwise, it'll be ignored and in most programming languages it looks like this:</p>
@@ -407,6 +410,9 @@ else
 <h3 id="switch-case"><a class="header" href="#switch-case">switch case</a></h3>
 <p>this is similar to an if statement, it's mostly used because writing multiple if statements after each other is harder to read and is slower in performance, but otherwise you're free to use whichever, lua doesn't seem to have an implementation for it so I'll refrain from writing an example, you can look it up yourself.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-4-loops"><a class="header" href="#chapter-4-loops">Chapter 4: Loops</a></h1>
+<blockquote>
+<p>last updated: 2025-03-27</p>
+</blockquote>
 <p>Before we get into what loops are there's an extra bit I need to talk about <a href="./chapter_2.html">some extra things about variables</a> which are arrays</p>
 <h2 id="arrays"><a class="header" href="#arrays">Arrays</a></h2>
 <p>We explained before that variables are name places in memory big enough for one value, but sometimes we need more than one value, so as an effort not to repeat ourselves, arrays were made.<br />
@@ -415,6 +421,30 @@ Arrays assign a place in memory for multiple values under one name, so say we ha
 local entry2 = "wash the dishes"
 local entry3 = "iron your clothes"
 </code></pre>
+<p>it's already hard to manage these in bulk programmatically, for example editing them or adding and removing some of them while running (also called runtime), this why they created arrays, with arrays it'd look something like this</p>
+<pre><code class="language-lua">local list_entries = {} -- declares an array
+list_entries[1] = "do your skincare"
+list_entries[2] = "washt he dishes"
+list_entries[3] = "iron your clothes"
+</code></pre>
+<p>so now if you want you can just add new entry by during runtime by called <code>list_entries[4], list_entries[5]</code> and so on<br />
+<span style="color: red">NOTE: in most languages, the array's index starts at 0, so if you want to access the Nth element, use index N-1<br />
+for example: for the 1st element use <code>list_entries[0]</code> and so on, lua is the only language that starts at 1 to my knowledge, though it now also supports starting at 0</span></p>
+<p>Now that we have gone over arrays, what happens if the array contains 100, 1000, or millions of items? This is where loops come in</p>
+<h2 id="loops"><a class="header" href="#loops">Loops</a></h2>
+<p>They're ways to repeat a certain block of code N number of times, and they generally have 3 types</p>
+<h3 id="for-loops"><a class="header" href="#for-loops">For loops</a></h3>
+<p>usually written like this</p>
+<pre><code class="language-c">for(/* initial value*/ ; /* stopping condition */ ; /* value change */){
+  // do something
+}
+</code></pre>
+<p>however it's different in some languages, so check the documentation for the language you're using, in lua it looks like this</p>
+<pre><code class="language-lua">for initial value, stopping value, value change do
+  -- do something
+  end
+</code></pre>
+<p>So say we have a list of all numbers from 1 to 10 and we need to find</p>
 
                     </main>
 
