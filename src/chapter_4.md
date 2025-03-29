@@ -1,5 +1,5 @@
 # Chapter 4: Loops
-> last updated: 2025-03-27  
+> last updated: 2025-03-29
 
 Before we get into what loops are there's an extra bit I need to talk about [some extra things about variables](./chapter_2.md) which are arrays  
 
@@ -65,5 +65,48 @@ Running the above code outputs something like this
 8
 10
 ...
+```
+### While Loops  
+almost exactly the same the for loops except we moved the `initial value` and the `value change` parts outside of the loop declaration leaving us with something more like this  
+```lua
+while condition do 
+  -- do something
+  end
+```
+it's mostly used for when something iterates automatically, think some value that has been already declared be someone else and all you do is say "give me the next value", however, that doesn't mean it can't be used like a for loop, this is answer to the same example in the for loop but with a while loop instead  
+```lua 
+local i = 1
+while i<=100 do 
+  if (i%2==0) then
+    print(i)
+    end
+  i = i + 1
+end
+```
+notice how here we declared i beforehand, and increased it's value by 1 manually, and extra note, what we did for the value of it is called *incrementation*, we *increment* the value, could also find it written as `i++` or `i+=1` in other languages, they mean the same thing  
+
+### Do While Loops
+exactly what a while loop does, except it ensure it runs for at least 1 time  
+so for example assume in our while loop we set i = 3 and we wanted it to run for as long as i<2, that would not even execute the loop because we already reached i>=2, a do while loop would still run once even if the condition is false, look it up in your desired language as it's not included in lua    
+
+Lastly, there's one last thing I should mention
+### the break statement
+Suppose in any loop you did, there was a reason you wanted to stop, say you were sending a value to another program and that program replies back with an OK, if you don't receive that OK you want to stop the loop, that's when a break statement comes in, it stops the loop and moves out a block whenever it's executed  
+so if it's in one loop
+```lua
+while condition do
+  break
+  end
+```
+would go back to our global scope, it's when it's not enclosed in anything (if statements, loops, and in the future, functions), however, in a local scope, say two loops inside each other (also called nested loops, same for if statements)  
+for example:  
+```lua 
+while condition do
+  while condition do
+    break
+    print("this statement will not be executed as the break above it will move us to the outer while loop")
+    end
+  print("this statemnent will be executed")
+  end
 ```
 

@@ -154,7 +154,7 @@
                     <main>
                         <h1 id="chapter-3-conditionals"><a class="header" href="#chapter-3-conditionals">Chapter 3: Conditionals</a></h1>
 <blockquote>
-<p>last updated: 2025-03-26</p>
+<p>last updated: 2025-03-29</p>
 </blockquote>
 <p>Sometimes you only want to activate some part of the code only if some condition applies, Say you're creating a login page that only admits one person named "mark" with all lowercase characters.</p>
 <h2 id="if-statements"><a class="header" href="#if-statements">IF statements</a></h2>
@@ -231,6 +231,11 @@ else
 </details>
 <h3 id="switch-case"><a class="header" href="#switch-case">switch case</a></h3>
 <p>this is similar to an if statement, it's mostly used because writing multiple if statements after each other is harder to read and is slower in performance, but otherwise you're free to use whichever, lua doesn't seem to have an implementation for it so I'll refrain from writing an example, you can look it up yourself.</p>
+<h3 id="combining-conditions"><a class="header" href="#combining-conditions">Combining Conditions</a></h3>
+<p>similar to how we <code>==</code> and shown other operands we can also use operands to combine the condition,
+so <code>user_role == "Admin" &amp;&amp; user_name == "Mark"</code> would check if the user is an admin first then check if their name is "Mark" if and only if both are true then it evaluates to true<br />
+on the other hand we have <code>||</code> for OR operations so <code>user_name == "Mark || user_role == "Admin"</code> would check either if the user is named "Mark", or if they're an admin, either one being true results in the entire condition being true<br />
+you can also use brackets <code>()</code> to set precedence as you'd do in a math equation</p>
 
                     </main>
 

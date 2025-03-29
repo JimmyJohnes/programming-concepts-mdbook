@@ -1,5 +1,5 @@
 # Chapter 3: Conditionals  
-> last updated: 2025-03-26  
+> last updated: 2025-03-29
 
 Sometimes you only want to activate some part of the code only if some condition applies, Say you're creating a login page that only admits one person named "mark" with all lowercase characters.   
 
@@ -87,3 +87,9 @@ so the Answer to it would be like this
 
 ### switch case
 this is similar to an if statement, it's mostly used because writing multiple if statements after each other is harder to read and is slower in performance, but otherwise you're free to use whichever, lua doesn't seem to have an implementation for it so I'll refrain from writing an example, you can look it up yourself.
+
+### Combining Conditions
+similar to how we `==` and shown other operands we can also use operands to combine the condition,
+so `user_role == "Admin" && user_name == "Mark"` would check if the user is an admin first then check if their name is "Mark" if and only if both are true then it evaluates to true  
+on the other hand we have `||` for OR operations so `user_name == "Mark || user_role == "Admin"` would check either if the user is named "Mark", or if they're an admin, either one being true results in the entire condition being true  
+you can also use brackets `()` to set precedence as you'd do in a math equation

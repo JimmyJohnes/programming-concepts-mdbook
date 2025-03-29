@@ -332,7 +332,7 @@ Variable names are replaced with their values during code execution.<br />
 Some languages require explicit expression of the variable types.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-3-conditionals"><a class="header" href="#chapter-3-conditionals">Chapter 3: Conditionals</a></h1>
 <blockquote>
-<p>last updated: 2025-03-26</p>
+<p>last updated: 2025-03-29</p>
 </blockquote>
 <p>Sometimes you only want to activate some part of the code only if some condition applies, Say you're creating a login page that only admits one person named "mark" with all lowercase characters.</p>
 <h2 id="if-statements"><a class="header" href="#if-statements">IF statements</a></h2>
@@ -409,9 +409,14 @@ else
 </details>
 <h3 id="switch-case"><a class="header" href="#switch-case">switch case</a></h3>
 <p>this is similar to an if statement, it's mostly used because writing multiple if statements after each other is harder to read and is slower in performance, but otherwise you're free to use whichever, lua doesn't seem to have an implementation for it so I'll refrain from writing an example, you can look it up yourself.</p>
+<h3 id="combining-conditions"><a class="header" href="#combining-conditions">Combining Conditions</a></h3>
+<p>similar to how we <code>==</code> and shown other operands we can also use operands to combine the condition,
+so <code>user_role == "Admin" &amp;&amp; user_name == "Mark"</code> would check if the user is an admin first then check if their name is "Mark" if and only if both are true then it evaluates to true<br />
+on the other hand we have <code>||</code> for OR operations so <code>user_name == "Mark || user_role == "Admin"</code> would check either if the user is named "Mark", or if they're an admin, either one being true results in the entire condition being true<br />
+you can also use brackets <code>()</code> to set precedence as you'd do in a math equation</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-4-loops"><a class="header" href="#chapter-4-loops">Chapter 4: Loops</a></h1>
 <blockquote>
-<p>last updated: 2025-03-27</p>
+<p>last updated: 2025-03-29</p>
 </blockquote>
 <p>Before we get into what loops are there's an extra bit I need to talk about <a href="./chapter_2.html">some extra things about variables</a> which are arrays</p>
 <h2 id="arrays"><a class="header" href="#arrays">Arrays</a></h2>
@@ -466,6 +471,43 @@ Running the above code outputs something like this</p>
 8
 10
 ...
+</code></pre>
+<h3 id="while-loops"><a class="header" href="#while-loops">While Loops</a></h3>
+<p>almost exactly the same the for loops except we moved the <code>initial value</code> and the <code>value change</code> parts outside of the loop declaration leaving us with something more like this</p>
+<pre><code class="language-lua">while condition do 
+  -- do something
+  end
+</code></pre>
+<p>it's mostly used for when something iterates automatically, think some value that has been already declared be someone else and all you do is say "give me the next value", however, that doesn't mean it can't be used like a for loop, this is answer to the same example in the for loop but with a while loop instead</p>
+<pre><code class="language-lua">local i = 1
+while i&lt;=100 do 
+  if (i%2==0) then
+    print(i)
+    end
+  i = i + 1
+end
+</code></pre>
+<p>notice how here we declared i beforehand, and increased it's value by 1 manually, and extra note, what we did for the value of it is called <em>incrementation</em>, we <em>increment</em> the value, could also find it written as <code>i++</code> or <code>i+=1</code> in other languages, they mean the same thing</p>
+<h3 id="do-while-loops"><a class="header" href="#do-while-loops">Do While Loops</a></h3>
+<p>exactly what a while loop does, except it ensure it runs for at least 1 time<br />
+so for example assume in our while loop we set i = 3 and we wanted it to run for as long as i&lt;2, that would not even execute the loop because we already reached i&gt;=2, a do while loop would still run once even if the condition is false, look it up in your desired language as it's not included in lua</p>
+<p>Lastly, there's one last thing I should mention</p>
+<h3 id="the-break-statement"><a class="header" href="#the-break-statement">the break statement</a></h3>
+<p>Suppose in any loop you did, there was a reason you wanted to stop, say you were sending a value to another program and that program replies back with an OK, if you don't receive that OK you want to stop the loop, that's when a break statement comes in, it stops the loop and moves out a block whenever it's executed<br />
+so if it's in one loop</p>
+<pre><code class="language-lua">while condition do
+  break
+  end
+</code></pre>
+<p>would go back to our global scope, it's when it's not enclosed in anything (if statements, loops, and in the future, functions), however, in a local scope, say two loops inside each other (also called nested loops, same for if statements)<br />
+for example:</p>
+<pre><code class="language-lua">while condition do
+  while condition do
+    break
+    print("this statement will not be executed as the break above it will move us to the outer while loop")
+    end
+  print("this statemnent will be executed")
+  end
 </code></pre>
 
                     </main>
