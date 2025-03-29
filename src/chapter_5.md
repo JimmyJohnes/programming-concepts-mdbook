@@ -27,4 +27,12 @@ function add_two (num1, num2)
   return sum
   end
 ```
-notice a new keyword here, `return`, it means "send this value back to whoever ran my code", in this case it's the sum of numbers passed to the function
+notice a new keyword here, `return`, it means "send this value back to whoever ran my code", in this case it's the sum of numbers passed to the function  
+and a function that doesn't take it parameters is written like this
+```lua
+function {function name} ()
+  -- do something
+  end
+```
+
+Finally, you can call the function to use it by writing it's name followed by the parentheses and any value you pass onto the function, so in our previous example `add_two(2,3)` would return 5 which you can store in a variable or output or do with as you'd like
