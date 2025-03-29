@@ -187,7 +187,29 @@ for example: for the 1st element use <code>list_entries[0]</code> and so on, lua
   -- do something
   end
 </code></pre>
-<p>So say we have a list of all numbers from 1 to 10 and we need to find</p>
+<p>Say we want to find the even numbers from 1 to 100, this would be difficult to do it manually, which is why we would want to use a loop, one way to do it is with a for loop<br />
+first we'd want to define the loop as we did before</p>
+<pre><code class="language-lua">for i=1,100,1 do
+  -- TODO: implement the logic
+end
+</code></pre>
+<p>we used i as a common practice, you can however name the variable that you assign the initial value to anything.<br />
+Now we can combine that with what we learned in <a href="./chapter_3.html">Chapter 3</a> to only output the numbers that are even, what are even numbers? They're numbers that don't leave a remainder when divided by 2, as we know we use a modulo <code>%</code> for that</p>
+<pre><code class="language-lua">for i=1,100,1 do
+  if (i%2 == 0) then
+      print(i)
+    end
+end
+</code></pre>
+<p>what the above code does, is try every number from 1 to 100, divides it by 2, and checks if there's any remainder left, it there is, then the number is odd and the <code>print(i)</code> statement doesn't execute, otherwise the number is even and we output it.<br />
+Running the above code outputs something like this</p>
+<pre><code>2
+4
+6
+8
+10
+...
+</code></pre>
 
                     </main>
 

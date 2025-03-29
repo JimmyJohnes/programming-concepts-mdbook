@@ -40,6 +40,30 @@ for initial value, stopping value, value change do
   -- do something
   end
 ```
-So say we have a list of all numbers from 1 to 10 and we need to find 
-
+Say we want to find the even numbers from 1 to 100, this would be difficult to do it manually, which is why we would want to use a loop, one way to do it is with a for loop  
+first we'd want to define the loop as we did before  
+```lua
+for i=1,100,1 do
+  -- TODO: implement the logic
+end
+```
+we used i as a common practice, you can however name the variable that you assign the initial value to anything.  
+Now we can combine that with what we learned in [Chapter 3](./chapter_3.md) to only output the numbers that are even, what are even numbers? They're numbers that don't leave a remainder when divided by 2, as we know we use a modulo `%` for that  
+```lua
+for i=1,100,1 do
+  if (i%2 == 0) then
+      print(i)
+    end
+end
+```
+what the above code does, is try every number from 1 to 100, divides it by 2, and checks if there's any remainder left, it there is, then the number is odd and the `print(i)` statement doesn't execute, otherwise the number is even and we output it.  
+Running the above code outputs something like this  
+```
+2
+4
+6
+8
+10
+...
+```
 
