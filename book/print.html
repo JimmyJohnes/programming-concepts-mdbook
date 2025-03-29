@@ -548,6 +548,51 @@ local birthdates = {"12-1-2001","1-2-2003","2-2-2003"}
 </code></pre>
 <p>You see how this is grounds for issues? You might miss something and make different size arrays, you might remove a student from the names list but not from the years or birthdates lists, this is why we encapsulate every variable related to an object into something called a class, you could say it's defining a custom data type</p>
 <p>Now because there's a lot of things related to classes and I'll only cover very basic things like class definition, class functions (also called methods), default values, and class usage.</p>
+<h3 id="class-definition-and-default-values"><a class="header" href="#class-definition-and-default-values">class Definition and Default values</a></h3>
+<p>Class definitions differ between languages, so check the documentation of your preferred language, however, in lua it is done like this</p>
+<pre><code class="language-lua">
+Student = {
+  name = "placeholder name",
+  year = "placeholder year",
+  birthdate = "placeholder birthdate"
+}
+function Student:create(o)
+    o.parent = self
+  end
+</code></pre>
+<p>Here we defined an class with some default values for name, year, and birthdate, so in case we forgot to assign a value to them, these values will show up, which makes for a nice of error detection</p>
+<p>Worth noting how the class name starts with a capital letter, that's mostly just convention, just how it's a convention for constants (values that will not change ever) to be written all in uppercase</p>
+<p>And the bit of <code>o.parent = self</code> can be considered black magic for now, all it does is make a new object with the same format as that class</p>
+<h3 id="class-functions"><a class="header" href="#class-functions">class Functions</a></h3>
+<p>Some classes can have methods/functions, say you and someone else are working on a game that has cars :) cars can move, correct? And each car has a model and top speed, you were tasked with creating the car class so all your friend should care about is having a car object (an instance of the class) that he can tell to move.</p>
+<p>We'll first start by defining the class as we did in the class definition part</p>
+<pre><code class="language-lua">
+Car= {
+  model= "placeholder model",
+  top_speed=0 
+}
+function Car:create(o)
+    o.parent = self
+  end
+
+</code></pre>
+<p>This will allow your friend to make a new car to their liking by <code>Car:create</code>  so if they wanted a Sedan with a top speed of 100 (unit intentionally left blank) then they can just do <code>local car1 = Car:create{model="sedan",top_speed=100}</code> and that would be it :D</p>
+<p>All that's left now is making the care move, see how we wrote a function that creates an instance of the car? It's exactly the same way here too</p>
+<pre><code class="language-lua">
+
+Car= {
+  model= "placeholder model",
+  top_speed=0 
+}
+function Car:create(o)
+    o.parent = self
+  end
+function Car:move()
+  print("Vroom!")
+  end
+
+</code></pre>
+<p>That's literally it :D your friend now can call it with <code>car1:move()</code> without caring about what actually is inside the function <code>move()</code></p>
 
                     </main>
 
