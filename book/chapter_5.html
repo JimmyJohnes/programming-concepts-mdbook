@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 4: Loops - beginner_programming_concepts</title>
+        <title>Chapter 5: Functions - beginner_programming_concepts</title>
 
 
         <!-- Custom HTML head -->
@@ -152,113 +152,15 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-4-loops"><a class="header" href="#chapter-4-loops">Chapter 4: Loops</a></h1>
-<blockquote>
-<p>last updated: 2025-03-29</p>
-</blockquote>
-<p>Before we get into what loops are there's an extra bit I need to talk about <a href="./chapter_2.html">some extra things about variables</a> which are arrays</p>
-<h2 id="arrays"><a class="header" href="#arrays">Arrays</a></h2>
-<p>We explained before that variables are name places in memory big enough for one value, but sometimes we need more than one value, so as an effort not to repeat ourselves, arrays were made.<br />
-Arrays assign a place in memory for multiple values under one name, so say we have a to-do list, trying to make it by adding each of them as a separate variable would be difficult</p>
-<pre><code class="language-lua">local entry1 = "do your skincare"
-local entry2 = "wash the dishes"
-local entry3 = "iron your clothes"
-</code></pre>
-<p>it's already hard to manage these in bulk programmatically, for example editing them or adding and removing some of them while running (also called runtime), this why they created arrays, with arrays it'd look something like this</p>
-<pre><code class="language-lua">local list_entries = {} -- declares an array
-list_entries[1] = "do your skincare"
-list_entries[2] = "washt he dishes"
-list_entries[3] = "iron your clothes"
-</code></pre>
-<p>so now if you want you can just add new entry by during runtime by called <code>list_entries[4], list_entries[5]</code> and so on<br />
-<span style="color: red">NOTE: in most languages, the array's index starts at 0, so if you want to access the Nth element, use index N-1<br />
-for example: for the 1st element use <code>list_entries[0]</code> and so on, lua is the only language that starts at 1 to my knowledge, though it now also supports starting at 0</span></p>
-<p>Now that we have gone over arrays, what happens if the array contains 100, 1000, or millions of items? This is where loops come in</p>
-<h2 id="loops"><a class="header" href="#loops">Loops</a></h2>
-<p>They're ways to repeat a certain block of code N number of times, and they generally have 3 types</p>
-<h3 id="for-loops"><a class="header" href="#for-loops">For loops</a></h3>
-<p>usually written like this</p>
-<pre><code class="language-c">for(/* initial value*/ ; /* stopping condition */ ; /* value change */){
-  // do something
-}
-</code></pre>
-<p>however it's different in some languages, so check the documentation for the language you're using, in lua it looks like this</p>
-<pre><code class="language-lua">for initial value, stopping value, value change do
-  -- do something
-  end
-</code></pre>
-<p>Say we want to find the even numbers from 1 to 100, this would be difficult to do it manually, which is why we would want to use a loop, one way to do it is with a for loop<br />
-first we'd want to define the loop as we did before</p>
-<pre><code class="language-lua">for i=1,100,1 do
-  -- TODO: implement the logic
-end
-</code></pre>
-<p>we used i as a common practice, you can however name the variable that you assign the initial value to anything.<br />
-Now we can combine that with what we learned in <a href="./chapter_3.html">Chapter 3</a> to only output the numbers that are even, what are even numbers? They're numbers that don't leave a remainder when divided by 2, as we know we use a modulo <code>%</code> for that</p>
-<pre><code class="language-lua">for i=1,100,1 do
-  if (i%2 == 0) then
-      print(i)
-    end
-end
-</code></pre>
-<p>what the above code does, is try every number from 1 to 100, divides it by 2, and checks if there's any remainder left, it there is, then the number is odd and the <code>print(i)</code> statement doesn't execute, otherwise the number is even and we output it.<br />
-Running the above code outputs something like this</p>
-<pre><code>2
-4
-6
-8
-10
-...
-</code></pre>
-<h3 id="while-loops"><a class="header" href="#while-loops">While Loops</a></h3>
-<p>almost exactly the same the for loops except we moved the <code>initial value</code> and the <code>value change</code> parts outside of the loop declaration leaving us with something more like this</p>
-<pre><code class="language-lua">while condition do 
-  -- do something
-  end
-</code></pre>
-<p>it's mostly used for when something iterates automatically, think some value that has been already declared be someone else and all you do is say "give me the next value", however, that doesn't mean it can't be used like a for loop, this is answer to the same example in the for loop but with a while loop instead</p>
-<pre><code class="language-lua">local i = 1
-while i&lt;=100 do 
-  if (i%2==0) then
-    print(i)
-    end
-  i = i + 1
-end
-</code></pre>
-<p>notice how here we declared i beforehand, and increased it's value by 1 manually, and extra note, what we did for the value of it is called <em>incrementation</em>, we <em>increment</em> the value, could also find it written as <code>i++</code> or <code>i+=1</code> in other languages, they mean the same thing</p>
-<h3 id="do-while-loops"><a class="header" href="#do-while-loops">Do While Loops</a></h3>
-<p>exactly what a while loop does, except it ensure it runs for at least 1 time<br />
-so for example assume in our while loop we set i = 3 and we wanted it to run for as long as i&lt;2, that would not even execute the loop because we already reached i&gt;=2, a do while loop would still run once even if the condition is false, look it up in your desired language as it's not included in lua</p>
-<p>Lastly, there's one last thing I should mention</p>
-<h3 id="the-break-statement"><a class="header" href="#the-break-statement">the break statement</a></h3>
-<p>Suppose in any loop you did, there was a reason you wanted to stop, say you were sending a value to another program and that program replies back with an OK, if you don't receive that OK you want to stop the loop, that's when a break statement comes in, it stops the loop and moves out a block whenever it's executed<br />
-so if it's in one loop</p>
-<pre><code class="language-lua">while condition do
-  break
-  end
-</code></pre>
-<p>would go back to our global scope, it's when it's not enclosed in anything (if statements, loops, and in the future, functions), however, in a local scope, say two loops inside each other (also called nested loops, same for if statements)<br />
-for example:</p>
-<pre><code class="language-lua">while condition do
-  while condition do
-    break
-    print("this statement will not be executed as the break above it will move us to the outer while loop")
-    end
-  print("this statemnent will be executed")
-  end
-</code></pre>
-
+                        
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="chapter_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="chapter_4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="chapter_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -266,13 +168,10 @@ for example:</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="chapter_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="chapter_4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="chapter_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
