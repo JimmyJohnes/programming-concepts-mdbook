@@ -518,6 +518,19 @@ for example:</p>
 }
 </code></pre>
 <p>for the declaration keyword, strongly types languages use the datatype that a function returns, so <code>int</code> lets you know you should expect an integer,<code>string</code> lets you know you should expect a string, <code>void</code> lets you know you shouldn't expect anything, however, in weakly typed languages, a lot of them just use the keyword <code>function</code>, which is what lua uses.</p>
+<p>The function name is just that, a name, similar to how you used a name for the variables in your code so you can use their value over and over again, a function name is used to call (ie. use their code) the function over and over again.</p>
+<p>Finally the function parameters, they're what the function <em>expects</em> to be given to it before it can start it's work, say you have a function that adds two numbers, you can't do that without being passed two numbers first.<br />
+Here's how to write a function in lua</p>
+<pre><code class="language-lua">function {function name} ({parameters})
+end
+</code></pre>
+<p>applying it to the add two example</p>
+<pre><code class="language-lua">function add_two (num1, num2)
+  local sum = num1 + num2
+  return sum
+  end
+</code></pre>
+<p>notice a new keyword here, <code>return</code>, it means "send this value back to whoever ran my code", in this case it's the sum of numbers passed to the function</p>
 
                     </main>
 
