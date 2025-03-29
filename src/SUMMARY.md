@@ -10,4 +10,4 @@
 - [Chapter 3: Conditionals](./chapter_3.md)
 - [Chapter 4: Loops](./chapter_4.md)
 - [Chapter 5: Functions](./chapter_5.md)
-- [Chapter 6: Classes]()
+- [Chapter 6: Classes](./chapter_6.md)

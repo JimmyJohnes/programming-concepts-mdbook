@@ -1,4 +1,5 @@
 # Chapter 5: Functions
+> last updated: 2025-03-29
 
 We're nearly done! The last two chapters have been hard so I'll try to keep it as simple as possible with this one  
 
