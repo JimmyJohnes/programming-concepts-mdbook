@@ -540,7 +540,15 @@ and a function that doesn't take it parameters is written like this</p>
   end
 </code></pre>
 <p>Finally, you can call the function to use it by writing it's name followed by the parentheses and any value you pass onto the function, so in our previous example <code>add_two(2,3)</code> would return 5 which you can store in a variable or output or do with as you'd like</p>
-<div style="break-before: page; page-break-before: always;"></div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-6-classes"><a class="header" href="#chapter-6-classes">Chapter 6: Classes</a></h1>
+<p>Following <a href="./chapter_5.html">Chapter 5</a>, classes are a way to keep your code modular, however this time we also encapsulate the variables too, say you have a list of students, each student has a name, a year they're in, and their birthdate, one way you could do it is by making them into arrays like this</p>
+<pre><code class="language-lua">local names = {"name1","name2","name3"}
+local years = {"grade 1","grade 2","grade 3"}
+local birthdates = {"12-1-2001","1-2-2003","2-2-2003"}
+</code></pre>
+<p>You see how this is grounds for issues? You might miss something and make different size arrays, you might remove a student from the names list but not from the years or birthdates lists, this is why we encapsulate every variable related to an object into something called a class, you could say it's defining a custom data type</p>
+<p>Now because there's a lot of things related to classes and I'll only cover very basic things like class definition, class functions (also called methods), default values, and class usage.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
